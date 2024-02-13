@@ -4,7 +4,7 @@ import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class dateUtils {
+public class DateUtils {
 
     //#region Get Current Date
     private Date getDate() {
@@ -20,6 +20,11 @@ public class dateUtils {
     public String getTodaysDate_ddMMMYYYY()
     {
         SimpleDateFormat simpleDate =  new SimpleDateFormat("dd MMM yyyy");
+        return simpleDate.format(getDate()).toUpperCase();
+    }
+    public String getTodaysDate_MMddYYYY()
+    {
+        SimpleDateFormat simpleDate =  new SimpleDateFormat("MM dd yyyy");
         return simpleDate.format(getDate()).toUpperCase();
     }
     //#endregion
