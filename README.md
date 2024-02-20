@@ -14,6 +14,8 @@
     - Minor Birthdays - Below 18
     - Adult Birthdays - 18 to 60
     - Senior Citizens - 60+
+  - Airport Codes
+  - Flight Numbers
 
 - Date utils
   - Calculate Next date
@@ -22,11 +24,10 @@
   - Calculating Next Day, Month, Year.
 
 - Dynamic Xpath Utility
-  - based on a variable driven XPath (Most useful in dealing with Lookalike elements)
+  - Based on a variable driven XPath (Most useful in dealing with Lookalike elements)
 
 ### How to utilize
 
-- Clone the project.
-- Execute file ```src\test\java\fakerUsage.java```
+- Example using TestNG: ```\src\test\java\Main.java```
 
 #### Send an email to <Girish.Kulkarni@nitorinfotech.com> for suggestions/feedbacks/customizations
