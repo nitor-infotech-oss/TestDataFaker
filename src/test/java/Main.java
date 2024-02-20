@@ -1,17 +1,18 @@
+import org.testng.annotations.Test;
 import com.qa.*;
 
 public class Main 
 {
-    public static void main(String[] args) {
-        new Main().giveMeFakeData();
-    }
-    
+    @Test
     public void giveMeFakeData(){
         System.out.println("------------------General Fakers------------------");
         System.out.println("First Name: "+ new FakerClass().getFirstName());
         System.out.println("Last Name: "+ new FakerClass().getLastName());
         System.out.println("Email ID: "+ new FakerClass().getFakeEmailID());
         System.out.println("Mobile Number: "+ new FakerClass().getPhoneNumber());
+        System.out.println("Minor Birth Date: "+ new FakerClass().getFakeBirthdayMinor());
+        System.out.println("Adult Birth Date: "+ new FakerClass().getFakeBirthdayAdult());
+        System.out.println("Senior Citizen Birth Date: "+ new FakerClass().getFakeBirthdaySeniorCitizen());
 
         System.out.println("------------------Xpath Util------------------");
         System.out.println("Xpath utility: "+ new CommonUtils().dynamicXpath("//div[text()='SampleXpath']", "SampleXpath", "ReplacedXpath"));

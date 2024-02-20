@@ -5,11 +5,17 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class DateUtils {
+    public Calendar cal;
+
+    public DateUtils()
+    {
+        cal = Calendar.getInstance();
+        cal.setTime(getDate());
+    }
 
     //#region Get Current Date
     private Date getDate() {
         Date curDate = new Date();
-        System.out.println("Current date is " + curDate);
         return curDate;
     }
     public String getTodaysDateAndTime_ddMMMYYHM()
@@ -30,9 +36,7 @@ public class DateUtils {
     //#endregion
 
     //#region Get Next Date
-    private  Date nextDate(int days) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(getDate());
+    public  Date nextDate(int days) {
         cal.add(Calendar.DATE, days);
         return cal.getTime();
     }
@@ -45,10 +49,7 @@ public class DateUtils {
 
     //#region Get Previous Date
     private  Date pastDate(int days) {
-        days = days * -1;
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(getDate());
-        cal.add(Calendar.DATE, days);
+        cal.add(Calendar.DATE, (days * -1));
         return cal.getTime();
     }
     public String getPastDate(int days)
@@ -60,8 +61,6 @@ public class DateUtils {
 
     //#region Add Months
     private  Date addMonths(int months) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(getDate());
         cal.add(Calendar.MONTH, months);
         return cal.getTime();
     }
@@ -74,8 +73,6 @@ public class DateUtils {
 
     //#region  Add Years
     private  Date addYears(int years) {
-        Calendar cal = Calendar.getInstance();
-        cal.setTime(getDate());
         cal.add(Calendar.YEAR, years);
         return cal.getTime();
     }
