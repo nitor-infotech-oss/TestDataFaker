@@ -10,11 +10,15 @@
   - Last Name
   - Phone Number
   - Email ID
+  - Fake Birthdays
+    - Minor Birthdays - Below 18
+    - Adult Birthdays - 18 to 60
+    - Senior Citizens - 60+
 
 - Date utils
   - Calculate Next date
   - Calculate Previous Date
-  - Date Format changer, 
+  - Date Format changer,
   - Calculating Next Day, Month, Year.
 
 - Dynamic Xpath Utility
